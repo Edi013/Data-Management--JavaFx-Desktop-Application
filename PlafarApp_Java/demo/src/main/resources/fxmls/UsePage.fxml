@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="UsePageBackgroud" stylesheets="@../css/UsePageCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.UsePageController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <GridPane layoutX="-1.0" prefHeight="600.0" prefWidth="337.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="403.0" minWidth="10.0" prefWidth="332.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="215.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="186.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="LeftMiddleAnchor" stylesheets="@../css/UsePageCSS.css" GridPane.rowIndex="1">
+                     <children>
+                        <Button fx:id="BuyBtn" layoutX="25.0" layoutY="93.0" mnemonicParsing="false" onAction="#BuyItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageBuyBtn" stylesheets="@../css/UsePageCSS.css" text="CUMPARARE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="BuyName" layoutX="14.0" layoutY="41.0" promptText="Name" styleClass="UsePageTextFieldBuy" />
+                        <TextField fx:id="BuyQuantity" layoutX="178.0" layoutY="41.0" onAction="#BuyItem" promptText="Quantity" styleClass="UsePageTextFieldBuy" />
+                        <Button layoutX="296.0" layoutY="3.0" mnemonicParsing="false" onAction="#BuyItem" styleClass="UsePageIconBtn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#10bc00" glyphName="DOLLAR" size="30" text="" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="172.0" prefWidth="238.0" styleClass="LeftTopAnchor" stylesheets="@../css/UsePageCSS.css">
+                     <children>
+                        <Button fx:id="AddBtn" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onAction="#AddItem" prefHeight="77.0" prefWidth="304.0" styleClass="UsePageAddBtn" stylesheets="@../css/UsePageCSS.css" text="ADAUGARE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="AddName" layoutX="17.0" layoutY="44.0" promptText="Name" styleClass="UsePageTextFieldAdd" />
+                        <TextField fx:id="AddQuantity" layoutX="178.0" layoutY="44.0" promptText="Quantity" styleClass="UsePageTextFieldAdd" />
+                        <TextField fx:id="AddPrice" layoutX="97.0" layoutY="81.0" onAction="#AddItem" promptText="Price" styleClass="UsePageTextFieldAdd" />
+                        <Button layoutX="289.0" layoutY="6.0" mnemonicParsing="false" onAction="#AddItem" styleClass="UsePageIconBtn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#a4adff" glyphName="PLUS" size="30" wrappingWidth="21.85714340209961" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="LeftBottomAnchor" GridPane.rowIndex="2">
+                     <children>
+                        <TextField fx:id="DeleteName" layoutX="94.0" layoutY="41.0" onAction="#DeleteItem" prefHeight="30.0" prefWidth="149.0" promptText="Name" styleClass="UsePageTextFieldDelete" />
+                        <Button fx:id="DeleteBtn" layoutX="24.0" layoutY="87.0" mnemonicParsing="false" onAction="#DeleteItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageDeleteBtn" stylesheets="@../css/UsePageCSS.css" text="STERGERE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="290.0" layoutY="3.0" mnemonicParsing="false" onAction="#DeleteItem" styleClass="UsePageIconBtn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#d2ce3e" glyphName="WRENCH" size="30" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <VBox layoutX="335.0" prefHeight="606.0" prefWidth="465.0">
+               <children>
+                  <GridPane prefHeight="600.0" prefWidth="465.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="196.0" minHeight="0.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="535.0" minHeight="10.0" prefHeight="528.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="66.0" prefWidth="465.0" styleClass="RightTopAnchor" stylesheets="@../css/UsePageCSS.css">
+                           <children>
+                              <Button fx:id="ExitBtn" layoutX="290.0" layoutY="19.0" mnemonicParsing="false" onAction="#ExitDB" prefHeight="38.0" prefWidth="128.0" styleClass="UsePageExitBtn" stylesheets="@../css/UsePageCSS.css" text="EXIT DATABASE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Button>
+                              <Button layoutX="415.0" mnemonicParsing="false" onAction="#ExitDB" prefHeight="38.0" prefWidth="21.0" styleClass="UsePageIconBtn">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#dd0101" glyphName="CLOSE" size="30" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="13.0" layoutY="20.0" mnemonicParsing="false" onAction="#SwapUser" prefHeight="38.0" prefWidth="128.0" styleClass="UsePageLogOutBtn" stylesheets="@../css/UsePageCSS.css" text="LOG OUT">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="141.0" mnemonicParsing="false" onAction="#SwapUser" prefHeight="27.0" prefWidth="15.0" styleClass="UsePageIconBtn">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#60a6fa" glyphName="USER" selectionFill="BLACK" size="30" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="527.0" prefWidth="465.0" styleClass="RightBottomAnchor" stylesheets="@../css/UsePageCSS.css" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="displayLabel" layoutX="14.0" layoutY="2.0" prefHeight="54.0" prefWidth="390.0" text="Available products">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <FontAwesomeIconView glyphName="BATTERY" layoutX="412.0" layoutY="44.0" size="30" />
+                              <ListView fx:id="listview" layoutX="14.0" layoutY="56.0" prefHeight="464.0" prefWidth="442.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

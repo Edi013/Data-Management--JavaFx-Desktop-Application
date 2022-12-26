@@ -1,0 +1,91 @@
+/*Login Page used*/
+.LoginBtn{
+    -fx-background-color: #007bf0;
+}
+.TextField{
+    -fx-border-color:  #007bf0;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-background-color: transparent;
+}
+
+
+/*Use Page used*/
+.LeftTopAnchor{
+    -fx-border-width: 6px 3px 3px 6px;/*top right bottom left*/
+    -fx-border-color: black;
+    /*-fx-background-color: black;*/
+}
+.LeftMiddleAnchor{
+    -fx-border-width: 3px 3px 3px 6px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.LeftBottomAnchor{
+    -fx-border-width: 3px 3px 6px 6px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.RightTopAnchor{
+    -fx-border-width: 6px 6px 3px 3px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.RightBottomAnchor{
+    -fx-border-width: 3px 6px 6px 3px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageExitBtn{
+    -fx-background-color: #ff7575;
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageIconBtn{
+    -fx-background-color: transparent;
+}
+.UsePageBuyBtn{
+    -fx-background-color: #5ab256 ;
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageTextFieldBuy{
+    -fx-border-color: #5ab256;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-background-color: transparent;
+}
+.UsePageAddBtn{
+    -fx-background-color: #a4adff;
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageTextFieldAdd{
+    -fx-border-color: #6271fc;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-background-color: transparent;
+}
+.UsePageDeleteBtn{
+    -fx-background-color: #d2ce3e;
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageTextFieldDelete{
+    -fx-border-color: #d2ce3e;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-background-color: transparent;
+}
+.UsePageLogOutBtn{
+    -fx-background-color: #60a6fa;
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+.UsePageDisplayItemsWindow{
+    -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
+    -fx-border-color: black;
+}
+
+
+/*Multiple pages used*/
+.InformationalText{
+    /*-fx-background-color: #a4adff;*/
+    /*-fx-border-width: 1px 1px 1px 1px; !*top right bottom left*!*/
+    /*-fx-border-color: black;*/
+}
+.UsePageBackgroud{
+    -fx-background-color: white;
+}
