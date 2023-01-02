@@ -1,9 +1,9 @@
 package com.example.demo.controllers;
 
-import com.example.demo.dependency_injection.Config;
+import com.example.demo.config.Config;
 import com.example.demo.exceptions.CredentialsTooShortException;
 import com.example.demo.exceptions.CredentialsWrong;
-import com.example.demo.modals.SceneManager;
+import com.example.demo.models.SceneManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

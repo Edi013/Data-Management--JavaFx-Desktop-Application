@@ -1,7 +1,5 @@
-package com.example.demo.modals;
+package com.example.demo.models;
 
-import com.example.demo.dependency_injection.Config;
-import com.example.demo.exceptions.ItemNotAvailableException;
 import com.example.demo.exceptions.MustBePositiveException;
 import com.example.demo.exceptions.QuantityNotAvailableException;
 

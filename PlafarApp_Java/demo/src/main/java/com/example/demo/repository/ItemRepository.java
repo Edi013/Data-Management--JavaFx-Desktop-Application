@@ -1,10 +1,10 @@
-package com.example.demo.data;
+package com.example.demo.repository;
 
-import com.example.demo.dependency_injection.Config;
+import com.example.demo.config.Config;
 import com.example.demo.exceptions.MustBePositiveException;
 import com.example.demo.exceptions.MustFillAllTextFieldsException;
 import com.example.demo.exceptions.QuantityNotAvailableException;
-import com.example.demo.modals.Item;
+import com.example.demo.models.Item;
 
 import java.io.*;
 import java.util.ArrayList;

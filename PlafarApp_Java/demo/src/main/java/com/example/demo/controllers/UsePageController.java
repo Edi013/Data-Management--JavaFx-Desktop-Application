@@ -1,12 +1,12 @@
 package com.example.demo.controllers;
 
-import com.example.demo.data.ItemRepository;
-import com.example.demo.dependency_injection.Config;
+import com.example.demo.repository.ItemRepository;
+import com.example.demo.config.Config;
 import com.example.demo.exceptions.MustBePositiveException;
 import com.example.demo.exceptions.MustFillAllTextFieldsException;
 import com.example.demo.exceptions.QuantityNotAvailableException;
-import com.example.demo.modals.Item;
-import com.example.demo.modals.SceneManager;
+import com.example.demo.models.Item;
+import com.example.demo.models.SceneManager;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -1,4 +1,4 @@
-package com.example.demo.dependency_injection;
+package com.example.demo.config;
 
 public class Config {
     public static int WINDOW_HEIGHT = 800;

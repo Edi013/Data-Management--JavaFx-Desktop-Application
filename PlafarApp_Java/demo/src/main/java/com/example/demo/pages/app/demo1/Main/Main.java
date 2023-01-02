@@ -1,7 +1,6 @@
-package com.example.demo.pages.app.demo1.pages;
+package com.example.demo.pages.app.demo1.Main;
 
-import com.example.demo.data.ItemRepository;
-import com.example.demo.dependency_injection.Config;
+import com.example.demo.config.Config;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage){
-        stage.setTitle("Plafar");
+        stage.setTitle("Stock Management");
 
         try {
             FXMLLoader root = new FXMLLoader(Main.class.getResource(Config.LOGIN_PAGE_PATH));
