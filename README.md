@@ -16,8 +16,11 @@ Phase 1 - Login
 
 Phase 2 - Manipulate data
 
-![Phase 2](https://user-images.githubusercontent.com/87914375/210241266-184d9782-ca82-4211-b4e5-6fcaaff58576.png)
-![Phase 3](https://user-images.githubusercontent.com/87914375/210241271-10760a71-73d5-4fdb-b911-74db8bbb248f.png)
+![Phase2](https://user-images.githubusercontent.com/87914375/210551760-7948d02a-3d1a-40c0-943c-ae8a65df1359.png)
+![Phase3](https://user-images.githubusercontent.com/87914375/210551762-86bf3970-5be0-48d7-8554-25fda28cefa3.png)
+![Phase4](https://user-images.githubusercontent.com/87914375/210551765-fdabfe98-df89-4973-bce0-5fc9e34f0fee.png)
+
+Every finished transaction is stored.
 
 # Tools
 - Java open-JDK 19.0.1
@@ -35,3 +38,8 @@ Is custom, simplistic conforming to the application’ size, this is how it look
 
 # DB
 For now, it uses CSV. 
+
+# Naming Convention
+
+![Naming Convention ](https://user-images.githubusercontent.com/87914375/210551767-1250c7bf-8a65-403b-91d7-6d49394f783a.png)
+
