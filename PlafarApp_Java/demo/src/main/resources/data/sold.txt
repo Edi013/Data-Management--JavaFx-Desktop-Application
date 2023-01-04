@@ -1,3 +1,2 @@
-Zen,3.99,15
-Zen,70.0,1
-1,1.0,1
+TestProduct,15.0,1
+TestProduct2,11.99,3

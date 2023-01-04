@@ -1,2 +1,2 @@
-Zen,70.0,9
-Crema,10.0,10
+TestProduct1,24.99,12
+TestProduct2,11.99,7
