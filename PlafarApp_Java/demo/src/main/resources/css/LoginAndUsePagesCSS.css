@@ -1,4 +1,4 @@
-/*Login Page used*/
+/*Login Page*/
 .LoginBtn{
     -fx-background-color: #007bf0;
 }
@@ -9,7 +9,7 @@
 }
 
 
-/*Use Page used*/
+/*Use Page*/
 .LeftTopAnchor{
     -fx-border-width: 6px 3px 3px 6px;/*top right bottom left*/
     -fx-border-color: black;
@@ -77,14 +77,6 @@
 .UsePageDisplayItemsWindow{
     -fx-border-width: 1px 1px 1px 1px; /*top right bottom left*/
     -fx-border-color: black;
-}
-
-
-/*Multiple pages used*/
-.InformationalText{
-    /*-fx-background-color: #a4adff;*/
-    /*-fx-border-width: 1px 1px 1px 1px; !*top right bottom left*!*/
-    /*-fx-border-color: black;*/
 }
 .UsePageBackgroud{
     -fx-background-color: white;

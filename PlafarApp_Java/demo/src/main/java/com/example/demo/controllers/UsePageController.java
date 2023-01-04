@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.exceptions.ItemNotAvailableException;
 import com.example.demo.repository.ItemRepository;
 import com.example.demo.config.Config;
 import com.example.demo.exceptions.MustBePositiveException;
@@ -24,28 +25,28 @@ public class UsePageController implements Initializable{
     @FXML
     private ListView<String> listview;
     @FXML
-    private Button AddBtn;
+    private Button addBtn;
     @FXML
-    private TextField AddName;
+    private TextField addName;
     @FXML
-    private TextField AddQuantity;
+    private TextField addQuantity;
     @FXML
-    private TextField AddPrice;
+    private TextField addPrice;
 
     @FXML
-    private Button BuyBtn;
+    private Button buyBtn;
     @FXML
-    private TextField BuyName;
+    private TextField buyName;
     @FXML
-    private TextField BuyQuantity;
+    private TextField buyQuantity;
 
     @FXML
-    private Button ExitBtn;
+    private Button exitBtn;
 
     @FXML
-    private Button DeleteBtn;
+    private Button deleteBtn;
     @FXML
-    private TextField DeleteName;
+    private TextField deleteName;
 
     @FXML
     private Label displayLabel;
@@ -60,12 +61,11 @@ public class UsePageController implements Initializable{
             this.displayLabel = new Label();
     }
 
-    //AddName.setText(""); la final de fiecare metoda
-    public void AddItem(){
+    public void addItem(){
         try{
-            String name = AddName.getText();
-            int quantity = Integer.parseInt(AddQuantity.getText());
-            float price = Float.parseFloat(AddPrice.getText());
+            String name = addName.getText();
+            int quantity = Integer.parseInt(addQuantity.getText());
+            float price = Float.parseFloat(addPrice.getText());
 
             itemRepo.addToStorage(name, price, quantity);
 
@@ -89,11 +89,11 @@ public class UsePageController implements Initializable{
         }
     }
 
-    public void BuyItem(){
+    public void buyItem(){
         try
         {
-            String name = BuyName.getText();
-            int quantityBought = Integer.parseInt(BuyQuantity.getText());
+            String name = buyName.getText();
+            int quantityBought = Integer.parseInt(buyQuantity.getText());
 
             Item item = itemRepo.findInListByName(name);
 
@@ -112,7 +112,7 @@ public class UsePageController implements Initializable{
         catch (NumberFormatException e){
             displayLabel.setText(Config.ERROR_MESSAGE_MUST_BE_NUMBER);
         }
-        catch (NullPointerException e){
+        catch (ItemNotAvailableException e){
                 displayLabel.setText(Config.BUY_ITEM_ERROR_NOT_EXISTS);
         }catch(QuantityNotAvailableException e){
             displayLabel.setText(Config.BUY_ITEM_ERROR_AMOUT);
@@ -121,9 +121,9 @@ public class UsePageController implements Initializable{
         }
     }
 
-    public void DeleteItem(){
+    public void deleteItem(){
         try{
-            String name = DeleteName.getText();
+            String name = deleteName.getText();
             Item item = itemRepo.findInListByName(name);
 
             itemRepo.removeFromStorage(item);
@@ -134,20 +134,20 @@ public class UsePageController implements Initializable{
 
             cleanUpDeleteTextFields();
 
-        }catch (NullPointerException e){
-            displayLabel.setText(Config.BUY_ITEM_ERROR_NOT_EXISTS);
+        }catch (ItemNotAvailableException e){
+            displayLabel.setText(Config.DELETE_ITEM_ERROR_MESSAGE);
         }catch (Exception e){
             displayLabel.setText(Config.ERROR_MESSAGE_CONTACT_US);
         }
     }
 
-    public void ExitDB(){
+    public void exitDB(){
         Platform.exit();
     }
 
-    public void SwapUser(){
+    public void swapUser(){
         try {
-            SceneManager.redirectTo(Config.LOGIN_PAGE_PATH, ExitBtn);
+            SceneManager.redirectTo(Config.LOGIN_PAGE_PATH, exitBtn);
         }catch (IOException e) {
             displayLabel.setText(Config.ERROR_MESSAGE_CONTACT_US);
         }
@@ -157,7 +157,7 @@ public class UsePageController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         fillDisplayListViewFromStorage();
     }
-    private void decreaseQuantityOfItem(Item item, int quantity) throws QuantityNotAvailableException, MustBePositiveException, NullPointerException {
+    private void decreaseQuantityOfItem(Item item, int quantity) throws QuantityNotAvailableException, MustBePositiveException, ItemNotAvailableException {
             itemRepo.decreaseQuantityOfItemFromStorage(item, quantity);
     }
     private void handelDispaly(String message){
@@ -184,15 +184,15 @@ public class UsePageController implements Initializable{
     }
 
     private void cleanUpAddTextFields(){
-        AddName.setText("");
-        AddPrice.setText("");
-        AddQuantity.setText("");
+        addName.setText("");
+        addPrice.setText("");
+        addQuantity.setText("");
     }
     private void cleanUpBuyTextFields(){
-        BuyName.setText("");
-        BuyQuantity.setText("");
+        buyName.setText("");
+        buyQuantity.setText("");
     }
     private void cleanUpDeleteTextFields(){
-        DeleteName.setText("");
+        deleteName.setText("");
     }
 }

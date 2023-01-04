@@ -24,7 +24,7 @@ public class Main extends Application {
             stage.show();
         }
         catch(IOException e){
-            System.out.println("eroare in main - start - ioexception");
+            System.out.println("Main - launch - start() exception");
         }
     }
 

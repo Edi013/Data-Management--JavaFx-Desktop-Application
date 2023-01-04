@@ -16,7 +16,7 @@
       <AnchorPane prefHeight="600.0" prefWidth="110.0" style="-fx-background-color: #007bf0;" BorderPane.alignment="CENTER" />
    </left>
    <center>
-      <AnchorPane prefHeight="400.0" prefWidth="603.0" stylesheets="@../css/UsePageCSS.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="603.0" stylesheets="@../css/LoginAndUsePagesCSS.css" BorderPane.alignment="CENTER">
          <children>
             <Text fontSmoothingType="LCD" layoutX="115.0" layoutY="107.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Management System" wrappingWidth="496.13671875">
                <font>

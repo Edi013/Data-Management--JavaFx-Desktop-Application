@@ -1,6 +1,7 @@
 package com.example.demo.repository;
 
 import com.example.demo.config.Config;
+import com.example.demo.exceptions.ItemNotAvailableException;
 import com.example.demo.exceptions.MustBePositiveException;
 import com.example.demo.exceptions.MustFillAllTextFieldsException;
 import com.example.demo.exceptions.QuantityNotAvailableException;
@@ -26,7 +27,6 @@ public class ItemRepository {
     }
 
     private void readStorage(){
-
         try
         {
                 Scanner storageScanner = new Scanner(storageFile);
@@ -106,9 +106,9 @@ public class ItemRepository {
 
         existingItem.increaseQuantityOfItemFromStorage(quantity);
     }
-    public void decreaseQuantityOfItemFromStorage(Item item, int quantitySold) throws QuantityNotAvailableException, NullPointerException, MustBePositiveException {
+    public void decreaseQuantityOfItemFromStorage(Item item, int quantitySold) throws QuantityNotAvailableException, ItemNotAvailableException, MustBePositiveException {
         if( item == null)
-            throw new NullPointerException();
+            throw new ItemNotAvailableException();
 
         boolean quantityIsZero = item.decreaseQuantityUntillRemoval(quantitySold);
 
@@ -117,9 +117,9 @@ public class ItemRepository {
             removeFromStorage(item);
         }
     }
-    public void removeFromStorage(Item item) throws NullPointerException {
+    public void removeFromStorage(Item item) throws ItemNotAvailableException {
         if(item == null)
-            throw new NullPointerException();
+            throw new ItemNotAvailableException();
 
         storage.remove(item);
     }
