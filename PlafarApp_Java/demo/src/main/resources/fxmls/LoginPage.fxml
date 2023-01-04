@@ -32,7 +32,7 @@
                <font>
                   <Font size="15.0" />
                </font></TextField>
-            <Button fx:id="login" layoutX="290.0" layoutY="401.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="50.0" prefWidth="111.0" styleClass="LoginBtn" text="Login" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="login" layoutX="290.0" layoutY="401.0" mnemonicParsing="false" onAction="#onClickLogin" prefHeight="50.0" prefWidth="111.0" styleClass="LoginBtn" text="Log in" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

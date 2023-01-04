@@ -28,7 +28,7 @@
                <children>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="LeftMiddleAnchor" stylesheets="@../css/LoginAndUsePagesCSS.css" GridPane.rowIndex="1">
                      <children>
-                        <Button fx:id="buyBtn" layoutX="25.0" layoutY="93.0" mnemonicParsing="false" onAction="#buyItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageBuyBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="CUMPARARE">
+                        <Button fx:id="buyBtn" layoutX="25.0" layoutY="93.0" mnemonicParsing="false" onAction="#buyItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageBuyBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="BUY">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -44,7 +44,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="172.0" prefWidth="238.0" styleClass="LeftTopAnchor" stylesheets="@../css/LoginAndUsePagesCSS.css">
                      <children>
-                        <Button fx:id="addBtn" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onAction="#addItem" prefHeight="77.0" prefWidth="304.0" styleClass="UsePageAddBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="ADAUGARE">
+                        <Button fx:id="addBtn" layoutX="19.0" layoutY="124.0" mnemonicParsing="false" onAction="#addItem" prefHeight="77.0" prefWidth="304.0" styleClass="UsePageAddBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="ADD">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
@@ -62,7 +62,7 @@
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="LeftBottomAnchor" GridPane.rowIndex="2">
                      <children>
                         <TextField fx:id="deleteName" layoutX="94.0" layoutY="41.0" onAction="#deleteItem" prefHeight="30.0" prefWidth="149.0" promptText="Name" styleClass="UsePageTextFieldDelete" />
-                        <Button fx:id="deleteBtn" layoutX="24.0" layoutY="87.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageDeleteBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="STERGERE">
+                        <Button fx:id="deleteBtn" layoutX="24.0" layoutY="87.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="77.0" prefWidth="288.0" styleClass="UsePageDeleteBtn" stylesheets="@../css/LoginAndUsePagesCSS.css" text="DELETE">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
